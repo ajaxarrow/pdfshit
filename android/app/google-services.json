@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "43604858069",
+    "project_id": "pdfshit-3e06b",
+    "storage_bucket": "pdfshit-3e06b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:43604858069:android:3489c94e0a0e82a3ee3e5c",
+        "android_client_info": {
+          "package_name": "com.example.pdfshits"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2u48k4Iw_xd47Rre3wjvW14vMNNJobvw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
