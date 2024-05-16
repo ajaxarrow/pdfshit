@@ -1,6 +1,7 @@
 import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:pdf/pdf.dart';
 import 'package:printing/printing.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
@@ -44,13 +45,18 @@ class _PDFViewerRouteState extends State<PDFViewerRoute> {
         'https://zorxewdwmjeavwhlyjqm.supabase.co/storage/v1/object/public/pdf/${widget.path}',
           key: _pdfViewerKey,
         onDocumentLoaded: (PdfDocumentLoadedDetails details) async {
+          final BuildContext currentContext = context;
           final Uint8List bytes = Uint8List.fromList( await details.document.save());
-          await Navigator.of(context).push(
+          if (!currentContext.mounted) {
+            return; // Exit early if the widget is not mounted
+          }
+          await Navigator.of(currentContext).push(
             MaterialPageRoute(builder: (context) => SafeArea(
-              child: PdfPreview(
-                build: (PdfPageFormat format) => bytes,
-              )
-            ))
+                child: PdfPreview(
+                  build: (PdfPageFormat format) => bytes,
+                )
+              ),
+            )
           );
         },
         ),

@@ -118,13 +118,13 @@ class ArticleItem extends StatelessWidget {
                       size: 16),
                   ),
                   const Spacer(),
-                  TextButton.icon(
-                    onPressed: printPDF,
-                    label: const Text('Print PDF'),
-                    icon: const Icon(
-                        Icons.edit_rounded,
-                        size: 16),
-                  ),
+                  // TextButton.icon(
+                  //   onPressed: printPDF,
+                  //   label: const Text('Print PDF'),
+                  //   icon: const Icon(
+                  //       Icons.edit_rounded,
+                  //       size: 16),
+                  // ),
                 ],
               )
             ],

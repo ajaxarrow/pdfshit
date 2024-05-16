@@ -56,14 +56,14 @@ class ArticleDetailsDialog extends StatelessWidget {
                     ),
                     Text('Platform Used: ${article.platform!}'),
                     const SizedBox(height: 10),
-                    Expanded(child: ElevatedButton(
+                    ElevatedButton(
                       child: const Text('View PDF'),
                       onPressed: (){
                         Navigator.of(context).push(MaterialPageRoute(builder: (context) => PDFViewerRoute(
                           path: article.path!,
                         )));
                       },
-                    ))
+                    )
                   ],
                 )
             ),
